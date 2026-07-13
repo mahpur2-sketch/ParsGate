@@ -4,52 +4,171 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ParsGate</title>
+
 <style>
-body{margin:0;font-family:Tahoma,Vazirmatn,sans-serif;background:#081B3A;color:#fff}
-header{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(8,27,58,.55);backdrop-filter:blur(14px);padding:18px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.08)}
-.logo{font-size:32px;font-weight:bold}.logo span{color:#D4AF37}
-nav a{color:#fff;text-decoration:none;margin:0 12px}
-.hero{height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background:linear-gradient(rgba(8,27,58,.78),rgba(8,27,58,.9)),url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80");background-size:cover;background-position:center}
-h1{font-size:54px;margin:0}
-p{max-width:850px;line-height:2;font-size:20px}
-.btns a{display:inline-block;margin:10px;padding:14px 28px;border-radius:40px;text-decoration:none;font-weight:bold}
-.gold{background:#D4AF37;color:#081B3A}
-.green{background:#25D366;color:#fff}
-section{padding:70px 8%;background:#f7f7f7;color:#222}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:#fff;border-radius:18px;padding:24px;box-shadow:0 10px 25px rgba(0,0,0,.1);transition:.35s}.card:hover{transform:translateY(-10px);box-shadow:0 18px 35px rgba(0,0,0,.18)}
-footer{background:#081B3A;color:#fff;text-align:center;padding:30px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:tahoma,sans-serif;
+background:#f5f5f5;
+color:#222;
+line-height:1.8;
+}
+
+header{
+background:#081B3A;
+color:#fff;
+padding:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+}
+
+.logo span{
+color:#D4AF37;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+}
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(8,27,58,.75),rgba(8,27,58,.75)),
+url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+max-width:800px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 30px;
+background:#D4AF37;
+color:#081B3A;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+section{
+padding:70px 8%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#081B3A;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+footer{
+background:#081B3A;
+color:white;
+text-align:center;
+padding:25px;
+}
 </style>
+
 </head>
+
 <body>
+
 <header>
 <div class="logo">Pars<span>Gate</span></div>
+
 <nav>
-<a href="#">خانه</a><a href="#">خدمات</a><a href="#">محصولات</a><a href="#">درباره ما</a><a href="#">تماس</a>
+<a href="#">خانه</a>
+<a href="#">خدمات</a>
+<a href="#">محصولات</a>
+<a href="#">تماس</a>
 </nav>
+
 </header>
 
 <section class="hero">
-<h1>دروازه تجارت ایران با جهان</h1>
-<p>تامین محصولات ایرانی با کیفیت بالا، قیمت رقابتی و خدمات کامل بازرگانی بین‌المللی.</p>
-<div class="btns">
-<a class="gold" href="#">استعلام قیمت</a>
-<a class="green" href="https://wa.me/989122382744">واتساپ</a>
-</div>
+
+<h1>ParsGate</h1>
+
+<p>
+تأمین کننده محصولات ایرانی با بهترین قیمت،
+بالاترین کیفیت و ارسال مطمئن به بازار عراق
+</p>
+
+<a class="btn" href="#">شروع همکاری</a>
+
 </section>
 
 <section>
-<h2>خدمات ParsGate</h2>
+
+<h2>خدمات ما</h2>
+
 <div class="cards">
-<div class="card"><h3>تامین کالا</h3><p>یافتن تولیدکنندگان معتبر ایران</p></div>
-<div class="card"><h3>بازاریابی بین‌المللی</h3><p>معرفی بازارهای هدف</p></div>
-<div class="card"><h3>حمل و نقل</h3><p>دریایی، زمینی و هوایی</p></div>
-<div class="card"><h3>قرارداد و بیمه</h3><p>قرارداد، بیمه و ترخیص کالا</p></div>
+
+<div class="card">
+<h3>تأمین کالا</h3>
+<p>تأمین مستقیم محصولات ایرانی از تولیدکنندگان معتبر.</p>
 </div>
+
+<div class="card">
+<h3>بهترین قیمت</h3>
+<p>قیمت رقابتی بدون واسطه.</p>
+</div>
+
+<div class="card">
+<h3>صادرات</h3>
+<p>هماهنگی حمل و صادرات به عراق.</p>
+</div>
+
+<div class="card">
+<h3>پشتیبانی</h3>
+<p>همراهی کامل از ثبت سفارش تا تحویل کالا.</p>
+</div>
+
+</div>
+
 </section>
 
 <footer>
+
 ParsGate © 2026
+
 </footer>
+
 </body>
 </html>
