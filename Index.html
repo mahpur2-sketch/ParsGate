@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ParsGate | Gateway to Iranian Products</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+:root{
+
+--navy:#071B3A;
+--gold:#D4AF37;
+--white:#ffffff;
+--gray:#ECECEC;
+--glass:rgba(255,255,255,.08);
+
+}
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:'Vazirmatn',sans-serif;
+background:var(--navy);
+color:white;
+overflow-x:hidden;
+
+}
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--gold);
+border-radius:50px;
+
+}
+
+a{
+
+text-decoration:none;
+
+}
+
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+padding:22px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(7,27,58,.55);
+
+backdrop-filter:blur(18px);
+
+z-index:999;
+
+transition:.4s;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.logo{
+
+font-size:34px;
+
+font-weight:800;
+
+letter-spacing:1px;
+
+color:white;
+
+}
+
+.logo span{
+
+color:var(--gold);
+
+}
+
+nav{
+
+display:flex;
+
+gap:34px;
+
+}
+
+nav a{
+
+color:white;
+
+font-size:15px;
+
+font-weight:500;
+
+transition:.35s;
+
+position:relative;
+
+}
+
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-8px;
+
+left:0;
+
+width:0;
+
+height:2px;
+
+background:var(--gold);
+
+transition:.35s;
+
+}
+
+nav a:hover{
+
+color:var(--gold);
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:0 8%;
+
+text-align:center;
+
+background:
+
+linear-gradient(rgba(7,27,58,.70),rgba(7,27,58,.88)),
+
+url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2200&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+.hero-content{
+
+max-width:950px;
+
+}
+
+.hero h3{
+
+letter-spacing:8px;
+
+font-weight:600;
+
+color:var(--gold);
+
+margin-bottom:20px;
+
+}
+
+.hero h1{
+
+font-size:78px;
+
+line-height:1.1;
+
+margin-bottom:25px;
+
+font-weight:800;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+line-height:2;
+
+color:#f1f1f1;
+
+margin-bottom:45px;
+
+}
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:18px 38px;
+
+border-radius:60px;
+
+font-weight:700;
+
+transition:.35s;
+
+}
+
+.gold{
+
+background:var(--gold);
+
+color:var(--navy);
+
+}
+
+.gold:hover{
+
+transform:translateY(-7px);
+
+}
+
+.outline{
+
+border:2px solid white;
+
+color:white;
+
+}
+
+.outline:hover{
+
+background:white;
+
+color:var(--navy);
+
+}
+
+section{
+
+padding:120px 8%;
+
+}
+
+@media(max-width:900px){
+
+nav{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+Pars<span>Gate</span>
+
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">About</a>
+
+<a href="#">Products</a>
+
+<a href="#">Services</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h3>GLOBAL EXPORT</h3>
+
+<h1>
+
+Gateway To Iranian Products
+
+</h1>
+
+<p>
+
+Connecting Iraqi importers with trusted Iranian manufacturers through professional sourcing, quality assurance and international logistics.
+
+</p>
+
+<div class="buttons">
+
+<a class="btn gold" href="#">
+
+Request Quote
+
+</a>
+
+<a class="btn outline" href="#">
+
+Explore Products
+
+</a>
+
+</div>
+
+</div>
+
+</section>
