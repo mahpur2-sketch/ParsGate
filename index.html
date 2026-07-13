@@ -1,40 +1,337 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ParsGate</title>
+
+<title>ParsGate | Gateway to Iranian Products</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
 body{
-font-family:tahoma,sans-serif;
-background:#f5f5f5;
-color:#222;
-line-height:1.8;
+
+font-family:'Vazirmatn',sans-serif;
+background:#071B3A;
+color:white;
+overflow-x:hidden;
+
+}
+
+body::-webkit-scrollbar{
+width:10px;
+}
+
+body::-webkit-scrollbar-thumb{
+
+background:#D4AF37;
+border-radius:20px;
+
 }
 
 header{
-background:#081B3A;
-color:#fff;
-padding:18px;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:22px 8%;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
+
+z-index:999;
+
+background:rgba(7,27,58,.45);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+transition:.4s;
+
 }
 
 .logo{
-font-size:30px;
-font-weight:bold;
+
+font-size:34px;
+
+font-weight:800;
+
+letter-spacing:1px;
+
+color:white;
+
 }
 
 .logo span{
+
 color:#D4AF37;
+
+}
+
+nav{
+
+display:flex;
+
+gap:35px;
+
 }
 
 nav a{
-color:white;
+
 text-decoration:none;
+
+color:white;
+
+font-weight:500;
+
+transition:.35s;
+
+}
+
+nav a:hover{
+
+color:#D4AF37;
+
+}
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:0 8%;
+
+background:
+
+linear-gradient(rgba(7,27,58,.70),rgba(7,27,58,.88)),
+
+url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2200&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+.hero-content{
+
+max-width:900px;
+
+}
+
+.hero h3{
+
+font-size:20px;
+
+letter-spacing:8px;
+
+color:#D4AF37;
+
+margin-bottom:15px;
+
+}
+
+.hero h1{
+
+font-size:78px;
+
+font-weight:800;
+
+line-height:1.1;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+line-height:2;
+
+color:#efefef;
+
+margin-bottom:45px;
+
+}
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:16px 42px;
+
+border-radius:60px;
+
+text-decoration:none;
+
+font-weight:700;
+
+transition:.35s;
+
+}
+
+.gold{
+
+background:#D4AF37;
+
+color:#071B3A;
+
+}
+
+.gold:hover{
+
+transform:translateY(-6px);
+
+}
+
+.dark{
+
+border:2px solid white;
+
+color:white;
+
+}
+
+.dark:hover{
+
+background:white;
+
+color:#071B3A;
+
+}
+
+@media(max-width:900px){
+
+nav{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+Pars<span>Gate</span>
+
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">About</a>
+
+<a href="#">Products</a>
+
+<a href="#">Services</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h3>GLOBAL EXPORT</h3>
+
+<h1>
+
+Gateway To Iranian Products
+
+</h1>
+
+<p>
+
+Premium sourcing partner for Iraqi importers.
+
+Direct access to verified Iranian manufacturers with competitive prices and professional export services.
+
+</p>
+
+<div class="buttons">
+
+<a class="btn gold" href="#">
+
+Request Quote
+
+</a>
+
+<a class="btn dark" href="#">
+
+Explore Products
+
+</a>
+
+</div>
+
+</div>
+
+</section>text-decoration:none;
 margin:0 10px;
 }
 
