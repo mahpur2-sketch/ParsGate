@@ -1,383 +1,1459 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!-- ==========================
+HEADER
+========================== -->
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<header class="header">
 
-<title>ParsGate | Gateway to Iranian Products</title>
+    <div class="top-language">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <a href="#" class="active">FA</a>
+        <span>|</span>
+        <a href="#">AR</a>
+        <span>|</span>
+        <a href="#">EN</a>
 
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </div>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <div class="container header-inner">
 
-<style>
+        <a href="#" class="logo">
 
-:root{
+            <span>Pars</span>Gate
 
---navy:#071B3A;
---gold:#D4AF37;
---white:#ffffff;
---gray:#ECECEC;
---glass:rgba(255,255,255,.08);
+        </a>
 
-}
+        <nav class="nav-menu">
 
-*{
+            <a href="#home">خانه</a>
 
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
+            <a href="#products">محصولات</a>
 
-}
+            <a href="#advantages">چرا پارس گیت</a>
 
-body{
+            <a href="#process">فرآیند همکاری</a>
 
-font-family:'Vazirmatn',sans-serif;
-background:var(--navy);
-color:white;
-overflow-x:hidden;
+            <a href="#catalog">کاتالوگ</a>
 
-}
+            <a href="#faq">سوالات متداول</a>
 
-::-webkit-scrollbar{
+            <a href="#contact">تماس با ما</a>
 
-width:10px;
+        </nav>
 
-}
+        <div class="header-actions">
 
-::-webkit-scrollbar-thumb{
+            <a href="#" class="header-btn">
 
-background:var(--gold);
-border-radius:50px;
+                درخواست استعلام
 
-}
+            </a>
 
-a{
+            <button class="menu-toggle">
 
-text-decoration:none;
+                <i class="fa-solid fa-bars"></i>
 
-}
+            </button>
 
-header{
+        </div>
 
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-
-padding:22px 8%;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-background:rgba(7,27,58,.55);
-
-backdrop-filter:blur(18px);
-
-z-index:999;
-
-transition:.4s;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
-}
-
-.logo{
-
-font-size:34px;
-
-font-weight:800;
-
-letter-spacing:1px;
-
-color:white;
-
-}
-
-.logo span{
-
-color:var(--gold);
-
-}
-
-nav{
-
-display:flex;
-
-gap:34px;
-
-}
-
-nav a{
-
-color:white;
-
-font-size:15px;
-
-font-weight:500;
-
-transition:.35s;
-
-position:relative;
-
-}
-
-nav a::after{
-
-content:"";
-
-position:absolute;
-
-bottom:-8px;
-
-left:0;
-
-width:0;
-
-height:2px;
-
-background:var(--gold);
-
-transition:.35s;
-
-}
-
-nav a:hover{
-
-color:var(--gold);
-
-}
-
-nav a:hover::after{
-
-width:100%;
-
-}
-
-.hero{
-
-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-padding:0 8%;
-
-text-align:center;
-
-background:
-
-linear-gradient(rgba(7,27,58,.70),rgba(7,27,58,.88)),
-
-url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2200&q=80");
-
-background-size:cover;
-
-background-position:center;
-
-}
-
-.hero-content{
-
-max-width:950px;
-
-}
-
-.hero h3{
-
-letter-spacing:8px;
-
-font-weight:600;
-
-color:var(--gold);
-
-margin-bottom:20px;
-
-}
-
-.hero h1{
-
-font-size:78px;
-
-line-height:1.1;
-
-margin-bottom:25px;
-
-font-weight:800;
-
-}
-
-.hero p{
-
-font-size:22px;
-
-line-height:2;
-
-color:#f1f1f1;
-
-margin-bottom:45px;
-
-}
-
-.buttons{
-
-display:flex;
-
-justify-content:center;
-
-gap:20px;
-
-flex-wrap:wrap;
-
-}
-
-.btn{
-
-padding:18px 38px;
-
-border-radius:60px;
-
-font-weight:700;
-
-transition:.35s;
-
-}
-
-.gold{
-
-background:var(--gold);
-
-color:var(--navy);
-
-}
-
-.gold:hover{
-
-transform:translateY(-7px);
-
-}
-
-.outline{
-
-border:2px solid white;
-
-color:white;
-
-}
-
-.outline:hover{
-
-background:white;
-
-color:var(--navy);
-
-}
-
-section{
-
-padding:120px 8%;
-
-}
-
-@media(max-width:900px){
-
-nav{
-
-display:none;
-
-}
-
-.hero h1{
-
-font-size:48px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">
-
-Pars<span>Gate</span>
-
-</div>
-
-<nav>
-
-<a href="#">Home</a>
-
-<a href="#">About</a>
-
-<a href="#">Products</a>
-
-<a href="#">Services</a>
-
-<a href="#">Contact</a>
-
-</nav>
+    </div>
 
 </header>
+<!-- ==========================
+HERO
+========================== -->
 
-<section class="hero">
+<section id="home" class="hero">
 
-<div class="hero-content">
+    <div class="hero-overlay"></div>
 
-<h3>GLOBAL EXPORT</h3>
+    <!-- کره زمین -->
+    <div class="hero-globe"></div>
 
-<h1>
+    <!-- هواپیمای متحرک -->
+    <div class="hero-plane">
+        <i class="fa-solid fa-plane"></i>
+    </div>
 
-Gateway To Iranian Products
+    <!-- کانتینر -->
+    <div class="hero-container-icon">
+        <i class="fa-solid fa-box"></i>
+    </div>
 
-</h1>
+    <div class="container hero-content">
+
+        <span class="hero-tag">
+
+            International Trade Gateway
+
+        </span>
+
+        <h1>
+
+            دروازه‌ای مطمئن برای تجارت بین‌المللی
+
+        </h1>
+
+        <p class="hero-subtitle">
+
+            تأمین، بازرسی، بسته‌بندی و صادرات محصولات ایرانی مطابق استانداردهای جهانی
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#products" class="btn btn-gold">
+
+                مشاهده محصولات
+
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+
+                درخواست استعلام
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-scroll">
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </div>
+
+</section>
+<!-- ==========================
+TRUST BAR
+========================== -->
+
+<section class="trust-bar">
+
+    <div class="container">
+
+        <div class="trust-grid">
+
+            <div class="trust-card">
+
+                <i class="fa-solid fa-award"></i>
+
+                <h3>کیفیت تضمین‌شده</h3>
+
+                <p>
+                    همکاری با تولیدکنندگان معتبر و انجام بازرسی پیش از ارسال
+                </p>
+
+            </div>
+
+            <div class="trust-card">
+
+                <i class="fa-solid fa-clipboard-check"></i>
+
+                <h3>کنترل کیفیت</h3>
+
+                <p>
+                    بررسی محصولات مطابق استانداردهای مورد انتظار مشتریان بین‌المللی
+                </p>
+
+            </div>
+
+            <div class="trust-card">
+
+                <i class="fa-solid fa-box-open"></i>
+
+                <h3>بسته‌بندی صادراتی</h3>
+
+                <p>
+                    بسته‌بندی ایمن و مناسب حمل‌ونقل بین‌المللی
+                </p>
+
+            </div>
+
+            <div class="trust-card">
+
+                <i class="fa-solid fa-ship"></i>
+
+                <h3>حمل‌ونقل جهانی</h3>
+
+                <p>
+                    هماهنگی ارسال کالا از کارخانه تا مقصد نهایی
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="advantages" class="advantages">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">PARSGATE</span>
+
+<h2>چرا پارس‌گیت؟</h2>
 
 <p>
 
-Connecting Iraqi importers with trusted Iranian manufacturers through professional sourcing, quality assurance and international logistics.
+پارس‌گیت پلی مطمئن میان تولیدکنندگان معتبر ایرانی و خریداران بین‌المللی است. ما تمام مراحل تأمین، کنترل کیفیت، بسته‌بندی، حمل‌ونقل و صادرات را مطابق استانداردهای جهانی مدیریت می‌کنیم.
 
 </p>
 
-<div class="buttons">
+</div>
 
-<a class="btn gold" href="#">
+<div class="advantages-grid">
 
-Request Quote
+<div class="adv-card">
 
-</a>
+<div class="adv-icon">
+<i class="fa-solid fa-industry"></i>
+</div>
 
-<a class="btn outline" href="#">
+<h3>تولیدکنندگان معتبر</h3>
 
-Explore Products
+<p>
 
-</a>
+همکاری مستقیم با کارخانه‌ها و برندهای معتبر ایران برای تضمین کیفیت کالا.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+<i class="fa-solid fa-award"></i>
+</div>
+
+<h3>کنترل کیفیت</h3>
+
+<p>
+
+تمامی محصولات قبل از ارسال توسط کارشناسان ما بررسی و تأیید می‌شوند.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+<i class="fa-solid fa-ship"></i>
+</div>
+
+<h3>مدیریت صادرات</h3>
+
+<p>
+
+از استعلام قیمت تا حمل بین‌المللی، تمام مراحل توسط پارس‌گیت انجام می‌شود.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+<i class="fa-solid fa-box-open"></i>
+</div>
+
+<h3>بسته‌بندی صادراتی</h3>
+
+<p>
+
+بسته‌بندی مطابق استانداردهای صادراتی و درخواست مشتری انجام می‌شود.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+<i class="fa-solid fa-globe"></i>
+</div>
+
+<h3>بازارهای بین‌المللی</h3>
+
+<p>
+
+تمرکز ما بر عراق، کشورهای منطقه و بازارهای جهانی است.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+<i class="fa-solid fa-handshake"></i>
+</div>
+
+<h3>همکاری بلندمدت</h3>
+
+<p>
+
+هدف ما ایجاد روابط تجاری پایدار، شفاف و قابل اعتماد با مشتریان است.
+
+</p>
+
+</div>
 
 </div>
 
 </div>
 
 </section>
+<section id="advantages" class="advantages">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">PARSGATE</span>
+
+<h2>چرا پارس‌گیت؟</h2>
+
+<p>
+
+پارس‌گیت پلی مطمئن میان تولیدکنندگان معتبر ایرانی و خریداران بین‌المللی است. ما تمام مراحل تأمین، کنترل کیفیت، بسته‌بندی، حمل‌ونقل و صادرات را مطابق استانداردهای جهانی مدیریت می‌کنیم.
+
+</p>
+
+</div>
+
+<div class="advantages-grid">
+
+<div class="adv-card">
+
+<div class="adv-icon">
+<i class="fa-solid fa-industry"></i>
+</div>
+
+<h3>تولیدکنندگان معتبر</h3>
+
+<p>
+
+همکاری مستقیم با کارخانه‌ها و برندهای معتبر ایران برای تضمین کیفیت کالا.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+<i class="fa-solid fa-award"></i>
+</div>
+
+<h3>کنترل کیفیت</h3>
+
+<p>
+
+تمامی محصولات قبل از ارسال توسط کارشناسان ما بررسی و تأیید می‌شوند.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+<i class="fa-solid fa-ship"></i>
+</div>
+
+<h3>مدیریت صادرات</h3>
+
+<p>
+
+از استعلام قیمت تا حمل بین‌المللی، تمام مراحل توسط پارس‌گیت انجام می‌شود.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+<i class="fa-solid fa-box-open"></i>
+</div>
+
+<h3>بسته‌بندی صادراتی</h3>
+
+<p>
+
+بسته‌بندی مطابق استانداردهای صادراتی و درخواست مشتری انجام می‌شود.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+<i class="fa-solid fa-globe"></i>
+</div>
+
+<h3>بازارهای بین‌المللی</h3>
+
+<p>
+
+تمرکز ما بر عراق، کشورهای منطقه و بازارهای جهانی است.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+<i class="fa-solid fa-handshake"></i>
+</div>
+
+<h3>همکاری بلندمدت</h3>
+
+<p>
+
+هدف ما ایجاد روابط تجاری پایدار، شفاف و قابل اعتماد با مشتریان است.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="stats">
+
+<div class="container">
+
+<div class="trust-grid">
+
+<div class="trust-card">
+<i class="fa-solid fa-industry"></i>
+<h3>250+</h3>
+<p>تولیدکننده معتبر</p>
+</div>
+
+<div class="trust-card">
+<i class="fa-solid fa-boxes-stacked"></i>
+<h3>5000+</h3>
+<p>محصول صادراتی</p>
+</div>
+
+<div class="trust-card">
+<i class="fa-solid fa-earth-asia"></i>
+<h3>18+</h3>
+<p>گروه کالایی</p>
+</div>
+
+<div class="trust-card">
+<i class="fa-solid fa-headset"></i>
+<h3>24/7</h3>
+<p>پشتیبانی بین‌المللی</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================
+PRODUCT CATEGORIES
+========================== -->
+
+<section id="products" class="products">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">
+
+Export Categories
+
+</span>
+
+<h2>
+
+دسته‌بندی محصولات
+
+</h2>
+
+<p>
+
+محصولات صادراتی پارس‌گیت در چهار گروه اصلی طبقه‌بندی شده‌اند. با انتخاب هر گروه، مجموعه کامل محصولات واقعی همان دسته نمایش داده خواهد شد.
+
+</p>
+
+</div>
+
+<div class="category-grid">
+
+<!-- Food -->
+
+<div class="category-card">
+
+<img src="images/category-food.jpg" alt="مواد غذایی">
+
+<div class="category-overlay">
+
+<h3>
+
+مواد غذایی صادراتی
+
+</h3>
+
+<p>
+
+زعفران، پسته، خرما، کشمش، عسل، خشکبار، گیاهان دارویی و...
+
+</p>
+
+<a href="#" class="btn-category">
+
+مشاهده محصولات
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Building -->
+
+<div class="category-card">
+
+<img src="images/category-building.jpg" alt="مصالح ساختمانی">
+
+<div class="category-overlay">
+
+<h3>
+
+مصالح ساختمانی
+
+</h3>
+
+<p>
+
+سیمان، کلینکر، کاشی، سرامیک، سنگ ساختمانی، شیرآلات و...
+
+</p>
+
+<a href="#" class="btn-category">
+
+مشاهده محصولات
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Chemical -->
+
+<div class="category-card">
+
+<img src="images/category-chemical.jpg" alt="مواد شیمیایی">
+
+<div class="category-overlay">
+
+<h3>
+
+مواد شیمیایی
+
+</h3>
+
+<p>
+
+مواد اولیه صنایع، رزین، افزودنی‌ها، حلال‌ها و...
+
+</p>
+
+<a href="#" class="btn-category">
+
+مشاهده محصولات
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Industrial -->
+
+<div class="category-card">
+
+<img src="images/category-industrial.jpg" alt="تجهیزات صنعتی">
+
+<div class="category-overlay">
+
+<h3>
+
+تجهیزات صنعتی
+
+</h3>
+
+<p>
+
+ماشین‌آلات، تجهیزات کارخانه‌ای، قطعات صنعتی و...
+
+</p>
+
+<a href="#" class="btn-category">
+
+مشاهده محصولات
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================
+WHY PARSGATE
+========================== -->
+
+<section id="advantages" class="advantages">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">
+
+Why ParsGate
+
+</span>
+
+<h2>
+
+چرا پارس گیت؟
+
+</h2>
+
+<p>
+
+ما تنها یک تأمین‌کننده نیستیم؛ شریک تجاری شما در تمامی مراحل صادرات هستیم.
+
+</p>
+
+</div>
+
+<div class="advantages-grid">
+
+<div class="adv-card">
+
+<div class="adv-icon">
+
+<i class="fa-solid fa-handshake"></i>
+
+</div>
+
+<h3>
+
+تأمین مستقیم
+
+</h3>
+
+<p>
+
+همکاری مستقیم با تولیدکنندگان معتبر ایرانی و حذف واسطه‌های غیرضروری.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+
+<i class="fa-solid fa-magnifying-glass-chart"></i>
+
+</div>
+
+<h3>
+
+بازرسی و کنترل کیفیت
+
+</h3>
+
+<p>
+
+کنترل کیفیت محصولات پیش از ارسال مطابق استانداردهای مورد نیاز مشتری.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+
+<i class="fa-solid fa-box-open"></i>
+
+</div>
+
+<h3>
+
+بسته‌بندی صادراتی
+
+</h3>
+
+<p>
+
+بسته‌بندی ایمن و استاندارد برای حمل‌ونقل زمینی، دریایی و هوایی.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+</div>
+
+<h3>
+
+مدیریت حمل‌ونقل
+
+</h3>
+
+<p>
+
+هماهنگی کامل ارسال کالا تا مقصد نهایی و مدیریت اسناد صادراتی.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+
+<i class="fa-solid fa-globe"></i>
+
+</div>
+
+<h3>
+
+بازارهای بین‌المللی
+
+</h3>
+
+<p>
+
+تمرکز بر عراق، کشورهای حوزه خلیج فارس و بازارهای جهانی.
+
+</p>
+
+</div>
+
+<div class="adv-card">
+
+<div class="adv-icon">
+
+<i class="fa-solid fa-user-shield"></i>
+
+</div>
+
+<h3>
+
+همکاری بلندمدت
+
+</h3>
+
+<p>
+
+ایجاد روابط تجاری شفاف، مطمئن و پایدار با مشتریان بین‌المللی.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================
+PROCESS
+========================== -->
+
+<section id="process" class="process">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">
+
+How We Work
+
+</span>
+
+<h2>
+
+فرآیند همکاری
+
+</h2>
+
+<p>
+
+از اولین تماس تا تحویل نهایی کالا، تمام مراحل توسط تیم پارس‌گیت مدیریت می‌شود.
+
+</p>
+
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-circle">
+<i class="fa-solid fa-comments"></i>
+</div>
+
+<h3>
+
+ثبت درخواست
+
+</h3>
+
+<p>
+
+دریافت نیاز مشتری و بررسی مشخصات محصول
+
+</p>
+
+</div>
+
+<div class="timeline-
+line"></div>
+
+<div class="timeline-item">
+
+<div class="timeline-circle">
+<i class="fa-solid fa-file-invoice-dollar"></i>
+</div>
+
+<h3>
+
+استعلام و پیش‌فاکتور
+
+</h3>
+
+<p>
+
+انتخاب بهترین تولیدکننده و ارائه قیمت
+
+</p>
+
+</div>
+
+<div class="timeline-line"></div>
+
+<div class="timeline-item">
+
+<div class="timeline-circle">
+<i class="fa-solid fa-industry"></i>
+</div>
+
+<h3>
+
+تأمین کالا
+
+</h3>
+
+<p>
+
+خرید مستقیم از تولیدکنندگان معتبر
+
+</p>
+
+</div>
+
+<div class="timeline-line"></div>
+
+<div class="timeline-item">
+
+<div class="timeline-circle">
+<i class="fa-solid fa-magnifying-glass"></i>
+</div>
+
+<h3>
+
+بازرسی و کنترل کیفیت
+
+</h3>
+
+<p>
+
+کنترل کیفیت و تأیید نهایی پیش از ارسال
+
+</p>
+
+</div>
+
+<div class="timeline-line"></div>
+
+<div class="timeline-item">
+
+<div class="timeline-circle">
+<i class="fa-solid fa-box"></i>
+</div>
+
+<h3>
+
+بسته‌بندی صادراتی
+
+</h3>
+
+<p>
+
+بسته‌بندی مطابق استانداردهای بین‌المللی
+
+</p>
+
+</div>
+
+<div class="timeline-line"></div>
+
+<div class="timeline-item">
+
+<div class="timeline-circle">
+<i class="fa-solid fa-ship"></i>
+</div>
+
+<h3>
+
+ارسال بین‌المللی
+
+</h3>
+
+<p>
+
+حمل زمینی، دریایی یا هوایی تا مقصد
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================
+CATALOG + DATASHEET
+========================== -->
+
+<section id="catalog" class="catalog">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">
+
+Product Catalog
+
+</span>
+
+<h2>
+
+کاتالوگ و مشخصات فنی
+
+</h2>
+
+<p>
+
+کاتالوگ کامل محصولات، مشخصات فنی و تصاویر واقعی را دریافت کنید.
+
+</p>
+
+</div>
+
+<div class="catalog-grid">
+
+<!-- Catalog -->
+
+<div class="catalog-card">
+
+<div class="catalog-image">
+
+<img src="images/catalog-cover.jpg" alt="ParsGate Catalog">
+
+</div>
+
+<div class="catalog-content">
+
+<h3>
+
+کاتالوگ محصولات صادراتی
+
+</h3>
+
+<p>
+
+نسخه کامل معرفی محصولات، تصاویر، مشخصات و اطلاعات صادراتی.
+
+</p>
+
+<a href="#" class="btn btn-gold">
+
+<i class="fa-solid fa-download"></i>
+
+دانلود کاتالوگ
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Datasheet -->
+
+<div class="catalog-card">
+
+<div class="catalog-image">
+
+<img src="images/datasheet.jpg" alt="Datasheet">
+
+</div>
+
+<div class="catalog-content">
+
+<h3>
+
+مشخصات فنی (Datasheet)
+
+</h3>
+
+<p>
+
+دریافت مشخصات فنی، آنالیز، استانداردها و اطلاعات مورد نیاز خریداران.
+
+</p>
+
+<a href="#" class="btn btn-outline">
+
+<i class="fa-solid fa-file-lines"></i>
+
+مشاهده دیتاشیت
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================
+FAQ
+========================== -->
+
+<section id="faq" class="faq">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">
+
+FAQ
+
+</span>
+
+<h2>
+
+سوالات متداول
+
+</h2>
+
+<p>
+
+پاسخ رایج‌ترین پرسش‌های مشتریان بین‌المللی
+
+</p>
+
+</div>
+
+<div class="faq-list">
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>آیا امکان تأمین محصولات سفارشی وجود دارد؟</span>
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+بله. محصولات مطابق مشخصات و استانداردهای درخواستی شما تأمین خواهند شد.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>بازرسی کیفیت چگونه انجام می‌شود؟</span>
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+تمام کالاها پیش از ارسال توسط تیم کنترل کیفیت بررسی و تأیید می‌شوند.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>روش‌های حمل‌ونقل چیست؟</span>
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+ارسال زمینی، دریایی و هوایی متناسب با نوع کالا و مقصد انجام می‌شود.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>آیا امکان دریافت نمونه وجود دارد؟</span>
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+بله، قبل از ثبت سفارش نهایی امکان ارسال نمونه برای اکثر محصولات وجود دارد.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+TRACK ORDER
+========================== -->
+
+<section id="tracking" class="tracking">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">
+
+Tracking
+
+</span>
+
+<h2>
+
+پیگیری سفارش
+
+</h2>
+
+<p>
+
+با وارد کردن شماره سفارش، وضعیت محموله خود را مشاهده کنید.
+
+</p>
+
+</div>
+
+<div class="tracking-box">
+
+<input type="text" placeholder="شماره سفارش">
+
+<button class="btn btn-gold">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+پیگیری
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================
+CONTACT
+========================== -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">
+
+Contact Us
+
+</span>
+
+<h2>
+
+ارتباط با ما
+
+</h2>
+
+<p>
+
+برای دریافت اطلاعات بیشتر، استعلام قیمت یا شروع همکاری با ما در ارتباط باشید.
+
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<!-- اطلاعات -->
+
+<div class="contact-info">
+
+<div class="contact-item">
+
+<i class="fa-solid fa-envelope"></i>
+
+<div>
+
+<h3>ایمیل</h3>
+
+<p>info@parsgate.co</p>
+
+</div>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+<div>
+
+<h3>واتساپ</h3>
+
+<p>+964 XXX XXX XXXX</p>
+
+</div>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<div>
+
+<h3>دفتر مرکزی</h3>
+
+<p>ایران</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- فرم -->
+
+<div class="contact-form">
+
+<form>
+
+<input type="text" placeholder="نام">
+
+<input type="email" placeholder="ایمیل">
+
+<input type="text" placeholder="کشور">
+
+<textarea placeholder="پیام شما"></textarea>
+
+<button type="submit" class="btn btn-gold">
+
+ارسال درخواست
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+FOOTER
+========================== -->
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3 class="footer-logo">
+
+Pars<span>Gate</span>
+
+</h3>
+
+<p>
+
+دروازه‌ای مطمئن برای تجارت بین‌المللی و صادرات محصولات ایرانی.
+
+</p>
+
+</div>
+
+<div>
+
+<h4>
+
+دسترسی سریع
+
+</h4>
+
+<ul>
+
+<li><a href="#home">خانه</a></li>
+
+<li><a href="#products">محصولات</a></li>
+
+<li><a href="#advantages">چرا پارس گیت</a></li>
+
+<li><a href="#contact">تماس با ما</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>
+
+راه‌های ارتباطی
+
+</h4>
+
+<ul>
+
+<li>info@parsgate.co</li>
+
+<li>WhatsApp</li>
+
+<li>Iran</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 ParsGate. All Rights Reserved.
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<a href="https://wa.me/9640000000000"
+class="whatsapp-float"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
